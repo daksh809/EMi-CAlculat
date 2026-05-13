@@ -1,6 +1,7 @@
 [app]
 
 title = EMI Calculator
+
 package.name = emicalculator
 package.domain = org.emi
 
@@ -15,10 +16,10 @@ orientation = portrait
 
 fullscreen = 0
 
-android.permissions = INTERNET
-
 android.api = 33
 android.minapi = 21
+
+android.permissions = INTERNET
 
 log_level = 2
 
