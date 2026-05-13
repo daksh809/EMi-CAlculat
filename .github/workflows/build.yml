@@ -7,21 +7,19 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+      - name: Checkout source
+        uses: actions/checkout@v4
 
-    - name: Build APK
-      uses: ArtemSBulgakov/buildozer-action@v1
+      - name: Build with Buildozer
+        uses: Digreatbrian/buildozer-action@v2
+        with:
+          buildozer_version: stable
 
-      with:
-        command: buildozer android debug
-
-    - name: Upload APK
-      uses: actions/upload-artifact@v4
-
-      with:
-        name: apk
-        path: bin/*.apk
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: EMI-APK
+          path: bin/*.apk
