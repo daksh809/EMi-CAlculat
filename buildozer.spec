@@ -6,7 +6,7 @@ package.name = emicalculator
 package.domain = org.emi
 
 source.dir = .
-source.include_exts = py,kv,png,jpg,atlas
+source.include_exts = py,png,jpg,kv,atlas
 
 version = 1.0
 
@@ -16,8 +16,12 @@ orientation = portrait
 
 fullscreen = 0
 
-android.api = 33
+android.api = 31
 android.minapi = 21
+android.sdk = 24
+android.ndk = 25b
+
+android.accept_sdk_license = True
 
 android.permissions = INTERNET
 
